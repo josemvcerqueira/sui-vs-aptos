@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "fetch": "tsx ./src/index.ts"
+    "fetch": "tsx ./src/index.ts",
+    "anima": "tsx ./src/anima.ts"
   },
   "keywords": [],
   "author": "",
