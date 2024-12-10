@@ -41,7 +41,7 @@ export const getNFTObjects = async ({
       ),
     },
     nfts: pathOr([], ['data', 'objects', 'nodes'], result).map((node) => ({
-      owner: pathOr('', ['owner', 'owner', 'address'], node),
+      owner: pathOr('', ['owner', 'parent', 'address'], node),
       content: pathOr('', ['asMoveObject', 'contents', 'json'], node),
     })),
   };
@@ -51,7 +51,7 @@ export const getNFTObjects = async ({
   let after = null;
   let results = [];
   let objects = await getNFTObjects({
-    objectType: AVATAR_TYPE,
+    objectType: ANIMA_COSMETIC_TYPE,
     after,
     first: 50,
   });
@@ -61,7 +61,7 @@ export const getNFTObjects = async ({
 
   while (after) {
     objects = await getNFTObjects({
-      objectType: AVATAR_TYPE,
+      objectType: ANIMA_COSMETIC_TYPE,
       after,
       first: 50,
     });
@@ -73,7 +73,7 @@ export const getNFTObjects = async ({
   log(results.length);
 
   await writeFile(
-    `${__dirname}/../data/anima-avatars.json`,
+    `${__dirname}/../data/anima-cosmetics.json`,
     JSON.stringify(results, null, 2)
   );
 })();
