@@ -51,7 +51,8 @@ export const getNFTObjects = async ({
   let after = null;
   let results = [];
   let objects = await getNFTObjects({
-    objectType: ANIMA_COSMETIC_TYPE,
+    objectType:
+      '0x8f74a7d632191e29956df3843404f22d27bd84d92cca1b1abde621d033098769::rootlet::Rootlet',
     after,
     first: 50,
   });
@@ -61,7 +62,8 @@ export const getNFTObjects = async ({
 
   while (after) {
     objects = await getNFTObjects({
-      objectType: ANIMA_COSMETIC_TYPE,
+      objectType:
+        '0x8f74a7d632191e29956df3843404f22d27bd84d92cca1b1abde621d033098769::rootlet::Rootlet',
       after,
       first: 50,
     });
@@ -73,7 +75,7 @@ export const getNFTObjects = async ({
   log(results.length);
 
   await writeFile(
-    `${__dirname}/../data/anima-cosmetics.json`,
+    `${__dirname}/../data/rootlets.json`,
     JSON.stringify(results, null, 2)
   );
 })();
