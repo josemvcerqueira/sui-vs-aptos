@@ -1,4 +1,4 @@
-import { keypair, sleep, suiClient, log, writeFile } from './utils';
+import { keypair, sleep, suiClient, log, writeFile, TOTAL_TX } from './utils';
 import { Transaction } from '@mysten/sui/transactions';
 
 const COUNTER_CONTRACT_ADDRESS =
@@ -9,8 +9,6 @@ const COUNTER_SHARED_OBJECT = {
   initialVersion: '477215908',
   mutable: true,
 };
-
-const TOTAL_TX = 10;
 
 (async () => {
   const gasPrice = await suiClient.getReferenceGasPrice();
@@ -60,6 +58,8 @@ const TOTAL_TX = 10;
     await sleep(2_000);
   }
 
+  const date = new Date().toUTCString();
+
   const summary = {
     results,
     averageBuildLatency:
@@ -67,10 +67,11 @@ const TOTAL_TX = 10;
       results.length,
     averageLatency:
       results.reduce((acc, curr) => acc + curr.latency, 0) / results.length,
+    date,
   };
 
   await writeFile(
-    `${__dirname}/../sui-results.json`,
+    `${__dirname}/../results/sui-${date}.json`,
     JSON.stringify(summary, null, 2)
   );
 })();

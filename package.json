@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sui-test": "tsx ./src/sui-test.ts"
+    "sui": "tsx ./src/sui-test.ts",
+    "aptos": "tsx ./src/aptos-test.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@9.1.0+sha512.67f5879916a9293e5cf059c23853d571beaf4f753c707f40cb22bed5fb1578c6aad3b6c4107ccb3ba0b35be003eb621a16471ac836c87beb53f9d54bb4612724",
   "dependencies": {
+    "@aptos-labs/ts-sdk": "^1.35.0",
     "@mysten/kiosk": "^0.9.22",
     "@mysten/sui": "^1.13.0",
     "@polymedia/suitcase-core": "^0.0.38",

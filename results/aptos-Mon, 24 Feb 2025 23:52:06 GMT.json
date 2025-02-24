@@ -1,0 +1,108 @@
+{
+  "results": [
+    {
+      "buildLatency": 0.07372216700000002,
+      "submitLatency": 0.07591975000000002,
+      "latency": 0.7940106669999999
+    },
+    {
+      "buildLatency": 0.0002207080000002861,
+      "submitLatency": 0.0760207919999998,
+      "latency": 0.9811870420000001
+    },
+    {
+      "buildLatency": 0.0004112089999998716,
+      "submitLatency": 0.0728837080000003,
+      "latency": 0.7048519580000002
+    },
+    {
+      "buildLatency": 0.0005542499999992288,
+      "submitLatency": 0.08271245799999997,
+      "latency": 0.6255548749999998
+    },
+    {
+      "buildLatency": 0.0011236669999998411,
+      "submitLatency": 0.08138895799999955,
+      "latency": 0.7736962920000006
+    },
+    {
+      "buildLatency": 0.0004890420000010636,
+      "submitLatency": 0.07210662500000035,
+      "latency": 0.8694514999999993
+    },
+    {
+      "buildLatency": 0.00044479099999807656,
+      "submitLatency": 0.07992525000000024,
+      "latency": 0.660275625000002
+    },
+    {
+      "buildLatency": 0.000746500000001106,
+      "submitLatency": 0.0803872080000001,
+      "latency": 0.8857116249999999
+    },
+    {
+      "buildLatency": 0.0014660829999993438,
+      "submitLatency": 0.0730034169999999,
+      "latency": 0.5558186249999999
+    },
+    {
+      "buildLatency": 0.000526917000002868,
+      "submitLatency": 0.07207845799999996,
+      "latency": 0.6554009579999983
+    },
+    {
+      "buildLatency": 0.001345000000001164,
+      "submitLatency": 0.07937454200000138,
+      "latency": 0.823698375
+    },
+    {
+      "buildLatency": 0.0005015830000011192,
+      "submitLatency": 0.09843320799999856,
+      "latency": 0.657752708
+    },
+    {
+      "buildLatency": 0.00048679200000333365,
+      "submitLatency": 0.08011974999999802,
+      "latency": 0.5895564169999998
+    },
+    {
+      "buildLatency": 0.000337416000002122,
+      "submitLatency": 0.07580316699999821,
+      "latency": 0.6849904170000009
+    },
+    {
+      "buildLatency": 0.00015908399999898392,
+      "submitLatency": 0.07920579100000032,
+      "latency": 0.9023791660000061
+    },
+    {
+      "buildLatency": 0.00031320899999991527,
+      "submitLatency": 0.07432708300000376,
+      "latency": 0.5940198750000054
+    },
+    {
+      "buildLatency": 0.000311334000005445,
+      "submitLatency": 0.0744306660000002,
+      "latency": 0.6854611249999943
+    },
+    {
+      "buildLatency": 0.00048670899999706305,
+      "submitLatency": 0.0767544160000034,
+      "latency": 1.0003851250000007
+    },
+    {
+      "buildLatency": 0.0002977499999979045,
+      "submitLatency": 0.07286066700000084,
+      "latency": 0.8464766249999957
+    },
+    {
+      "buildLatency": 0.0003422090000021854,
+      "submitLatency": 0.08030387499999779,
+      "latency": 0.8693897910000015
+    }
+  ],
+  "averageSubmitLatency": 0.07790198945000013,
+  "averageBuildLatency": 0.004214321000000547,
+  "averageLatency": 0.7580034395500004,
+  "date": "Mon, 24 Feb 2025 23:52:06 GMT"
+}
