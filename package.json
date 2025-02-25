@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sui": "tsx ./src/sui-test.ts",
+    "sui-executor": "tsx ./src/sui-executor-test.ts",
     "aptos": "tsx ./src/aptos-test.ts"
   },
   "keywords": [],
