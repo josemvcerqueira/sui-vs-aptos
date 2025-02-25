@@ -23,8 +23,6 @@ const COUNTER_SHARED_OBJECT = {
 
   const txs = [];
 
-  const buildStartTime = performance.now();
-
   for (let i = 0; i < TOTAL_TX; i++) {
     const tx = new Transaction();
     tx.setSender(keypair.toSuiAddress());
@@ -43,12 +41,12 @@ const COUNTER_SHARED_OBJECT = {
       ],
     });
 
-    txs.push(executor.executeTransaction(tx));
+    txs.push(tx);
   }
 
   const startTime = performance.now();
 
-  await Promise.all(txs);
+  await Promise.all(txs.map((tx) => executor.executeTransaction(tx)));
 
   const endTime = performance.now();
 
@@ -57,7 +55,6 @@ const COUNTER_SHARED_OBJECT = {
   const date = new Date().toUTCString();
 
   const summary = {
-    buildTime: (startTime - buildStartTime) / 1000,
     latency: latency / TOTAL_TX,
     date,
   };
